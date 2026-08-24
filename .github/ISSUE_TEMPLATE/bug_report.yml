@@ -1,0 +1,86 @@
+name: Bug report
+description: Report a reproducible Guided CMS problem
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Search existing Issues first and never include credentials, purchase codes, private URLs or unredacted logs.
+  - type: input
+    id: version
+    attributes:
+      label: Guided CMS version
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: PHP version, browser, operating system and hosting environment.
+      placeholder: PHP 8.4, Firefox 130, Windows 11, shared hosting
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Setup and login
+        - Theme analysis
+        - Pages and visual editor
+        - Navigation and SEO
+        - Media
+        - Posts, portfolio or gallery
+        - Contact form or SMTP
+        - Newsletter or double opt-in
+        - Backup or restore
+        - Translation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open ...
+        2. Choose ...
+        3. Save ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add a reduced HTML example, screenshot or short sanitized log excerpt only when useful. Do not redistribute a commercial theme.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed passwords, FTP/SSH or SMTP details, private URLs, personal data, licence keys and Envato purchase codes.
+          required: true
+        - label: I searched existing Issues and Discussions.
+          required: true
